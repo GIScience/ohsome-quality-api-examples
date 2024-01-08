@@ -1,6 +1,6 @@
-# OQT Notebooks
+# OQAPI Notebooks
 
-Jupyter Notebook with examples on how to use the OQT API with Python.
+Jupyter Notebook with examples on how to use the ohsome quality API with Python.
 
 ## Usage
 
