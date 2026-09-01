@@ -1,0 +1,51 @@
+[project]
+name = "ohsome-quality-api-examples"
+version = "0.1.0"
+description = "Examples on how to use the ohsome quality API (OQAPI) with Python."
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "geojson>=3.2.0",
+    "geopandas>=1.1.4",
+    "pandas>=2.2.3",
+    "plotly>=5.24.1",
+    "requests>=2.32.3",
+]
+
+[project.urls]
+Homepage = "https://oqt.ohsome.org"
+Documentation = "https://oqt.ohsome.org/api/docs"
+Repository = "https://github.com/GIScience/oqt-examples"
+
+[dependency-groups]
+dev = [
+    "jupyter>=1.1.1",
+    "notebook>=7.3.2",
+    "kaleido>=1.2.0",
+    "ruff>=0.16.5",
+    "prek>=0.5.1",
+]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+extend-exclude = ["Haiti_0.1deg.gpkg"]
+
+[tool.ruff.lint]
+select = [
+    "A",    # flake8-builtins
+    "E",    # pycodestyle Error
+    "F",    # Pyflakes
+    "I",    # isort
+    "N",    # pep8-naming
+    "Q",    # flake8-quotes
+    "W",    # pycodestyle Warning
+    "C90",  # mccabe
+    "TRY",  # tryceratops
+    "FURB", # refurb
+    "PERF", # perflint
+    "S",    # bandit
+    "B",    # bugbear
+    "SIM",  # simplify
+    "RUF",  # ruff-specific rules
+]

@@ -13,18 +13,27 @@ To launch this notebook with Binder press this button: [![Binder](https://mybind
 
 ### Requirements
 
-- Python: 3.10
+- Python: 3.13 (see `.python-version`)
+- [uv](https://docs.astral.sh/uv/)
 
 ### Installation
 
 ```bash
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
+uv sync
+```
+
+This creates a virtual environment at `.venv` and installs all dependencies,
+pinned in `uv.lock`.
+
+To also install the [pre-commit](https://pre-commit.com) hooks, run via
+[prek](https://github.com/j178/prek):
+
+```bash
+uv run prek install
 ```
 
 ### Usage
 
 ```bash
-jupyter notebook
+uv run jupyter notebook
 ```
