@@ -5,15 +5,20 @@ Jupyter Notebook with examples on how to use the ohsome quality API with Python.
 ## Usage
 
 To launch this notebook with Binder press this button: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GIScience/oqt-examples.git/HEAD?labpath=notebook.ipynb)
+
+Requests to the ohsome quality API require an API key. Get a free key at
+[account.heigit.org](https://account.heigit.org/) and set it as the
+`OQAPI_API_KEY` environment variable before running the notebook or scripts.
+
 ## About
 
-[Website](https://oqt.ohsome.org) | [GitHub](https://github.com/GIScience/ohsome-quality-analyst) | [API](https://oqt.ohsome.org/api/docs)
+[Website](https://api.quality.ohsome.org) | [GitHub](https://github.com/GIScience/ohsome-quality-api) | [API docs](https://api.heigit.org/docs/?urls.primaryName=ohsome+quality+API)
 
 ## Development Setup
 
 ### Requirements
 
-- Python: 3.13 (see `.python-version`)
+- Python: 3.13
 - [uv](https://docs.astral.sh/uv/)
 
 ### Installation

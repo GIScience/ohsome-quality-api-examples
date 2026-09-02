@@ -24,8 +24,17 @@ except IndexError:
     )
     sys.exit(1)
 
+try:
+    api_key = "YOUR_API_KEY"
+except KeyError:
+    print(
+        "the OQAPI_API_KEY environment variable is not set. get a free API key at "
+        "https://account.heigit.org/ and set it via `export OQAPI_API_KEY=<your-key>`"
+    )
+    sys.exit(1)
 
-base_url = "https://api.quality.ohsome.org/v1-test"
+
+base_url = "https://api.heigit.org/ohsome-quality-api/v2"
 endpoint = "/indicators"
 url = base_url + endpoint + indicator
 
@@ -33,7 +42,7 @@ gdf = gpd.read_file(input_geom_path)
 gdf["result_value"] = pd.Series([None] * len(gdf), dtype="float")
 gdf["response_time"] = pd.Series([None] * len(gdf), dtype="float")
 
-headers = {"accept": "application/json"}
+headers = {"accept": "application/json", "authorization": api_key}
 
 
 def fetch(index, geometry):
